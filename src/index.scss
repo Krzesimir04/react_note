@@ -1,0 +1,102 @@
+
+@mixin df {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.1rem;
+}
+body, #root{
+    @include df;
+    background-color: #282828;
+    color: rgb(255, 0, 183);
+    height: 100vh;
+    width: 100%;
+}
+header{
+    @include df;
+    height: 10%;
+    background-color: #303030;
+}
+main{
+    width: 50%;
+    height: 90%;
+}
+img{
+    height: 2rem;
+}
+a, .note{
+    background-color: rgb(255, 0, 183);
+    color: black;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+}
+textarea {
+    width: 100%;
+    height: 92%;
+    font-size: large;
+    background-color:#373737;
+    border: none;
+    resize: none;
+    color: #FFFFFF;
+    &:focus{
+        outline: none;
+        border-bottom: 2px solid rgb(255, 0, 183);
+    }
+    }
+
+
+.content{
+    height: 90%;
+    background-color: #373737;
+    position: relative;
+}
+
+.add_button{
+    @include df;
+    position: fixed;
+    bottom: 4rem;
+    right: 30%;
+    padding: 1rem;
+    opacity: 0.8;
+    &:hover{
+        background-color: rgb(202, 0, 145);
+    }
+}
+.buttons_edit{
+    @include df;
+    justify-content: space-between;
+    height: 8%;
+}
+
+.note_btn{
+    &:hover{
+        background-color: rgb(202, 0, 145);
+    }
+}
+.note{
+    border-bottom: 2px solid rgb(255, 0, 183);
+    border-radius: 0;
+    color: rgb(255, 0, 183);
+    margin-bottom: 0.7rem;
+    padding: 0.6rem;
+    background-color: #4a4a4a;
+    display: block;
+    &:hover{
+        background-color: #383838;
+    }
+}
