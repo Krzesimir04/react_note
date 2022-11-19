@@ -1,5 +1,5 @@
 # react_note
 
-##description
+## description
 
 On this site you can add, delete and modify your notes.
