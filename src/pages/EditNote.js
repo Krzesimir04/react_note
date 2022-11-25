@@ -33,9 +33,9 @@ const EditNote = () => {
 
   return (
     <>
-        <div className='buttons_edit'>
-            <Link className='note_btn' to={'/react_note'} onClick={Save}>BACK</Link>
-            {( title === 'new' ? <Link className='note_btn' to={'/react_note'} onClick={Save}>DONE</Link> : <Link className='note_btn' to={'/react_note'} onClick={DeleteNote}>DELETE</Link>)}
+        <div className='buttons-edit'>
+            <Link className='note-btn' to={'/'} onClick={Save}>BACK</Link>
+            {( title === 'new' ? <Link className='note-btn' to={'/'} onClick={Save}>DONE</Link> : <Link className='note-btn' to={'/'} onClick={DeleteNote}>DELETE</Link>)}
         </div>
         <textarea ref={text} autoFocus={true}>{text.current}</textarea>
     </>

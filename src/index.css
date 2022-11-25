@@ -5,6 +5,12 @@
   font-size: 1.5rem;
 }
 
+h1 {
+  justify-self: center;
+  align-self: center;
+  margin-left: 11%;
+}
+
 p {
   font-size: 1.1rem;
 }
@@ -20,11 +26,22 @@ body, #root {
 }
 
 header {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  height: 10%;
+  background-color: #303030;
+}
+
+#long-notes {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
-  background-color: #303030;
+  flex-direction: column;
+}
+#long-notes label {
+  margin: 0.3rem;
+  font-size: medium;
+  text-align: center;
 }
 
 main {
@@ -68,29 +85,29 @@ textarea:focus {
   position: relative;
 }
 
-.add_button {
+.add-button {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 4rem;
-  right: 30%;
+  bottom: 11%;
+  right: 28.5%;
   padding: 1rem;
   opacity: 0.8;
 }
-.add_button:hover {
+.add-button:hover {
   background-color: rgb(202, 0, 145);
 }
 
-.buttons_edit {
+.buttons-edit {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  height: 8%;
+  padding: 0.5em;
 }
 
-.note_btn:hover {
+.note-btn:hover {
   background-color: rgb(202, 0, 145);
 }
 
