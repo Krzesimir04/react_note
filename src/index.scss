@@ -29,14 +29,16 @@ body, #root{
 }
 header{
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 85% 15%;
     height: 13%;
     background-color: #303030;
 }
 
 button{
     background-color: rgba($color: #000000, $alpha: 0);
+    @include df;
     border: none;
+    margin: 5px;
     &:hover{
         cursor: pointer;
         background-color: rgba($color: #000000, $alpha: 0.1)
@@ -45,6 +47,8 @@ button{
 
 #long-notes{
     @include df;
+    align-self:center;
+    justify-self: end;
     flex-direction: column;
     label{
         margin: 0.3rem;
