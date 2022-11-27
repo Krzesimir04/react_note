@@ -5,21 +5,30 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import {useState} from 'react'
+import {useState} from 'react';
+import Settings from './components/Settings';
+import settingsImage from './settings.svg'
 
 function App() {
   let [longNotes,setNotes] = useState(false);
+  let [showSettings,setVisibilityOfSettings] = useState(false);
 
+  console.log(showSettings)
+  console.log(longNotes)
+  function sett(){
+    setNotes(!longNotes);
+  }
   return (
     <main>
 
     <header>
         <h1>My Note App</h1>
         <span id="long-notes">
-          <label htmlFor='long-notes'>Longer notes</label>
-          <input type="checkbox" name='long-notes' onChange={(e)=>setNotes(!longNotes)}/>
+          <button onClick={() => setVisibilityOfSettings(!showSettings)}><img src={settingsImage} alt="settings"/></button>
         </span>
     </header>
+    <Settings visible={showSettings} onSubmit={sett} longNotes={longNotes}/>
+
 
     <div className='content'>
       <Router>

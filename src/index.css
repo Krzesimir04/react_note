@@ -32,6 +32,15 @@ header {
   background-color: #303030;
 }
 
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 #long-notes {
   display: flex;
   justify-content: center;
