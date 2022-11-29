@@ -10,10 +10,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: opacity 2s, z-index 2s;
 }
 
 .true {
+  transition: opacity 2s, z-index;
   z-index: 1;
   opacity: 0.8;
 }
@@ -21,10 +21,42 @@
 .false {
   opacity: 0;
   z-index: -1;
+  transition: opacity 2s, z-index 0s 2s;
 }
 
 label {
   text-align: center;
   font-size: 15px;
   margin: 0.5em;
+}
+
+@media screen and (max-width: 700px) {
+  .settings {
+    position: absolute;
+    width: 2em;
+    min-width: 5%;
+    height: 11.5%;
+    right: 0%;
+    top: 13%;
+  }
+  .true {
+    transition: opacity 2s, z-index;
+    z-index: 1;
+    opacity: 0.6;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .settings {
+    position: absolute;
+    width: 2em;
+    min-width: 5%;
+    height: 11.5%;
+    right: 25%;
+    top: 16.7%;
+  }
+  .true {
+    transition: opacity 2s, z-index;
+    z-index: 1;
+    opacity: 0.6;
+  }
 }/*# sourceMappingURL=settings.css.map */

@@ -13,8 +13,6 @@ function App() {
   let [longNotes,setNotes] = useState(false);
   let [showSettings,setVisibilityOfSettings] = useState(false);
 
-  console.log(showSettings)
-  console.log(longNotes)
   function sett(){
     setNotes(!longNotes);
   }
