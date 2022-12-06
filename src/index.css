@@ -68,7 +68,7 @@ img {
   height: 2rem;
 }
 
-a, .note {
+a, .note, button {
   background-color: rgb(255, 0, 183);
   color: black;
   padding: 5px;
@@ -123,7 +123,7 @@ textarea:focus {
   padding: 0.5em;
 }
 
-.note-btn:hover {
+.note-btn:hover, button:hover {
   background-color: rgb(202, 0, 145);
 }
 

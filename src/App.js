@@ -13,7 +13,7 @@ function App() {
   let [longNotes,setNotes] = useState(false);
   let [showSettings,setVisibilityOfSettings] = useState(false);
 
-  function sett(){
+  function set(){
     setNotes(!longNotes);
   }
   return (
@@ -25,7 +25,7 @@ function App() {
           <button onClick={() => setVisibilityOfSettings(!showSettings)}><img src={settingsImage} alt="settings"/></button>
         </span>
     </header>
-    <Settings visible={showSettings} onSubmit={sett} longNotes={longNotes}/>
+    <Settings visible={showSettings} onSubmit={set} longNotes={longNotes}/>
 
 
     <div className='content'>

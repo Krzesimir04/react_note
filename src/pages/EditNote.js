@@ -1,8 +1,10 @@
-import React, {createRef} from 'react';
+import React, {createRef,useState} from 'react';
 import {Link,useParams} from 'react-router-dom';
+import AcceptDeleting from '../components/AcceptDeleting';
 const EditNote = () => {
     let title=useParams().title;
     let text = createRef();
+    let [visible, setVisible] = useState("unvisible")
     text.current = localStorage[title];
 
 //Save or remove when note is blank
@@ -28,14 +30,17 @@ const EditNote = () => {
 
 //delete note
   let DeleteNote = () => {
-    localStorage.removeItem(title);
+    setVisible("visible")
   }
-
+  let ChangeClass=()=>{
+    setVisible("unvisible")
+  }
   return (
     <>
+      <AcceptDeleting visible={visible} title={title} onSubmit={ChangeClass}/>
         <div className='buttons-edit'>
             <Link className='note-btn' to={'/'} onClick={Save}>BACK</Link>
-            {( title === 'new' ? <Link className='note-btn' to={'/'} onClick={Save}>DONE</Link> : <Link className='note-btn' to={'/'} onClick={DeleteNote}>DELETE</Link>)}
+            {( title === 'new' ? <Link className='note-btn' to={'/'} onClick={Save}>DONE</Link> : <button className='note-btn' onClick={DeleteNote}>DELETE</button>)}
         </div>
         <textarea ref={text} autoFocus={true}>{text.current}</textarea>
     </>

@@ -1,0 +1,35 @@
+.visible {
+  position: fixed;
+  color: black;
+  width: 100%;
+  background-color: rgb(255, 0, 183);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s linear;
+  transform: translate(0, 0);
+}
+
+.unvisible {
+  position: fixed;
+  color: black;
+  width: 100%;
+  background-color: rgb(255, 0, 183);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s linear;
+  transform: translate(0, -100%);
+}
+
+p {
+  margin: 0 1em 0 1em;
+}
+
+a, button {
+  background-color: rgb(220, 0, 160);
+}/*# sourceMappingURL=AcceptDeleting.css.map */
