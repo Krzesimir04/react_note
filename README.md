@@ -23,7 +23,7 @@ If you want to see more text of your notes you can choose `options` sign and che
 
 ![Main page image](./img/option(checked).png)
 
-## Instalation on local machine
+## Installation on local machine
 
 ```
 git init
